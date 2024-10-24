@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+  <link rel="stylesheet" href="/css/form.css">
+    <style>
+      body{
+          background-image: url("assets/reg.jpg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+      }
+    </style>
+</head>
+<body>
+<form action="">
+  <legend>Create an account !</legend>
+  <br>
+  <label for="fName">first Name:</label>
+  <input type="text" id="fName" placeholder="enter first name" required="required">
+    <br> <br>
+    <label for="Sname">Surname</label>
+    <input type="text" id="Sname" placeholder="enter the surname" aria-placeholder="surname" required="required"><br>
+    <br>
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" placeholder="johndoe@gmail.com" required="required"> <br> <br>
+
+    <label for="pass">Password</label>
+    <input type="password" id="pass" placeholder="enter password" required="required"><br><br>
+
+    <label for="phone">Phone numbers:</label>
+    <input type="tel" id="phone" placeholder=" e.g 0712345678" required="required"><br><br>
+
+    <label for="address">Home address</label>
+    <input type="number" id="address" required="required" placeholder="1234"><br><br>
+
+    <label for="file">choose a file</label>
+    <input type="file" id="file"> <br><br>
+
+    <label for="nation"> select Nationality</label>
+    <select name="" id="nation">
+        <option value="" disabled="disabled">--Choose One--</option>
+        <option value="">Kenyan</option>
+        <option value="">Dutch</option>
+        <option value="">German</option>
+        <option value="">Italia</option>
+    </select>
+    <br><br>
+    <label>choose Gender:</label><br>
+    <input type="radio" id="male">
+    <label for="male">Male</label>
+    <br>
+
+    <input type="radio" id="female">
+    <label for="female">Female</label>
+    <br>
+
+    <input type="radio" id="other">
+    <label for="other">Other</label><br><br>
+
+    <label>Choose your favourite football team:</label><br>
+    <input type="checkbox" id="Man united">
+    <label for="Man united">Man United</label> <br>
+    <input type="checkbox" id="Arsenal">
+    <label for="Arsenal">Arsenal</label> <br>
+    <input type="checkbox" id="Chelsea">
+    <label for="Chelsea">Chelsea</label> <br><br>
+
+    <label for="message">Describe yourself</label> <br>
+    <textarea name="" id="message" cols="30" rows="10" placeholder="Type something here..." maxlength="200"></textarea>
+
+    <br><br>
+    <input type="checkbox" id="terms">
+    <label for="terms">i  agree terms and conditions <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi molestiae officiis! Atque consequuntur deleniti dicta doloremque enim, est id iusto mollitia nam nihil omnis possimus reiciendis repellendus similique unde.</p></label><br><br>
+
+    <button>Register</button>
+</form>
+
+</body>
+</html>

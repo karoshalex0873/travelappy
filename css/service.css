@@ -1,0 +1,46 @@
+#myDivision{
+    background-color: antiquewhite;
+    h1{
+        text-align: center;
+    }
+}
+#test img{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 50%;
+}
+#test{
+    display: flex;
+    background-color: lightgray;
+    margin: 25px;
+    padding: 15px;
+    gap: 20px;
+}
+#main{
+    background-color: lightgray;
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.advert img{
+    width: 40px;
+    height: 40px;
+    }
+.advert{
+    border-radius: 8px;
+    background-color: darkgray;
+    padding: 15px;
+    width: 250px;
+    justify-content: center;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+}
+.advert:hover{
+    box-shadow: 10px 4px 4px black;
+}

@@ -1,0 +1,47 @@
+body{
+    padding: 15px;
+    /*background-image:url("assets/reg.jpg");*/
+}
+ form{
+     margin:auto;
+     padding: 30px;
+     background-color: darkgray;
+     border-radius: 8px;
+     width: 50%;
+     font-size:20px;
+     box-shadow: 12px 12px 8px 8px rgba(29, 28, 28, 0.82);
+ }
+legend{
+     text-align: center;
+     font-size: 30px;
+    margin: auto;
+     font-weight: bold;
+     background-color: darkgray;
+     color: darkcyan;
+     text-shadow: 12px 8px 12px gray;
+ }
+input[type=text],input[type=email],input[type=password],input[type=tel],input[type=number],select{
+    width: 100%;
+    height: 30px;
+    box-shadow: 12px 4px 12px 4px rgba(29, 28, 28, 0.82);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,input[type=tel]:focus,input[type=number]:focus{
+    background-color: lightgray;
+    color: white;
+}
+button{
+    background-color:rgba(29, 28, 28, 0.82);
+    width: 30%;
+    border-radius: 10px;
+    height: 40px;
+    color: white;
+    margin: auto;
+    display: block;
+}
+button:hover{
+    background-color: gray;
+    color: black;
+    cursor: pointer;
+}

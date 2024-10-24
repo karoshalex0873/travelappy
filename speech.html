@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognizer with Female Voice Reply</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #transcript {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Speech Recognizer</h1>
+    <button id="start-btn">Start Recognition</button>
+    <div id="transcript">Transcript will appear here...</div>
+
+    <script>
+        const startBtn = document.getElementById('start-btn');
+        const transcriptDiv = document.getElementById('transcript');
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            transcriptDiv.textContent = transcript;
+            reply(transcript);
+        };
+
+        recognition.onerror = (event) => {
+            console.error('Error occurred in recognition: ' + event.error);
+        };
+
+        function reply(message) {
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = `You said: ${message}`;
+            speech.volume = 1; // volume level (0 to 1)
+            speech.rate = 1; // speaking rate (0.1 to 10)
+            speech.pitch = 1; // pitch level (0 to 2)
+
+            // Set a female voice
+            const voices = window.speechSynthesis.getVoices();
+            const femaleVoice = voices.find(voice => voice.name.includes('Google US English') || voice.name.includes('en-US')) || voices[0];
+            speech.voice = femaleVoice;
+
+            window.speechSynthesis.speak(speech);
+        }
+
+        startBtn.addEventListener('click', () => {
+            recognition.start();
+        });
+
+        // Load voices
+        window.speechSynthesis.onvoiceschanged = () => {
+            const voices = window.speechSynthesis.getVoices();
+            console.log(voices); // Log available voices for debugging
+        };
+    </script>
+
+</body>
+</html>
